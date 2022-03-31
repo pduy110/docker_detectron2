@@ -42,6 +42,13 @@ RUN pip install --user -e detectron2_repo
 ENV FVCORE_CACHE="/tmp"
 WORKDIR /home/project_82/detectron2_repo
 
+
+
+# Install some extra stuff during build
+RUN sudo apt install nano
+RUN sudo apt install gedit
+RUN sudo apt install dbus-x11 
+
 # run detectron2 under user "project_82":
 # wget http://images.cocodataset.org/val2017/000000439715.jpg -O input.jpg
 # python3 demo/demo.py  \
