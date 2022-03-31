@@ -5,8 +5,8 @@ services:
     container_name: dex_detectron2_docker
     network_mode: host
     build:
-      context: .
-      dockerfile: https://github.com/pduy110/docker_detectron2.git#main
+      context: https://github.com/pduy110/docker_detectron2.git#main
+      dockerfile: Dockerfile
       args:
         USER_ID: ${USER_ID:-1000}
     deploy:

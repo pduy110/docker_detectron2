@@ -45,9 +45,8 @@ WORKDIR /home/project_82/detectron2_repo
 
 
 # Install some extra stuff during build
-RUN sudo apt install nano
-RUN sudo apt install gedit
-RUN sudo apt install dbus-x11 
+RUN sudo apt-get -y update && apt-get install -y nano && gedit && dbus-x11
+
 
 # run detectron2 under user "project_82":
 # wget http://images.cocodataset.org/val2017/000000439715.jpg -O input.jpg
