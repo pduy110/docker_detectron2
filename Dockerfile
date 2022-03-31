@@ -46,7 +46,7 @@ WORKDIR /home/project_82/detectron2_repo
 
 # Install some extra stuff during build
 USER root
-RUN sudo apt-get -y update && apt-get install -y nano && gedit && dbus-x11
+RUN sudo apt-get -y update && apt-get install -y nano && apt-get install -y gedit && apt-get install -y dbus-x11
 USER project_82
 
 # run detectron2 under user "project_82":
